@@ -1,0 +1,15 @@
+Game Start
+Word is selected from word bank to display on game board 
+Length of word is visible to user by underscores 
+User selects a letter as a guess 
+If the guessed letter is in the word, the letter(s) will replace underscores 
+If the guessed letter is not in the word, 1 will be subtracted from the remaining guesses 
+If the user guessed incorrectly the person will sink lower into the dunk tank
+If the user guessed correctly the person will remain in place hovering over the dunk tank
+This loop will continue until the user either runs out of guesses and loses the game 
+Or if the user guesses all the correct letters to spell the word and wins the game
+If the user loses the game the person will sink into the dunk tank 
+and a "You've been dunked!" message will appear with a "Play Again" button at the bottom of the message
+If the user wins a "You've won!" message will display with a "Play Again" button at the bottom of the message 
+Game End 
+Game will restart with new word from the word bank if "Play Again" button is selected
