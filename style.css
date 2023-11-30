@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -21,9 +21,8 @@ header {
 h1 {
     font-size: 5vmin;
     position: absolute;
-    text-align: right;
+    text-align: center;
     top: 150px;
-    right: 30px;
     width: 500px;
     padding: 10px;
 }
@@ -31,7 +30,7 @@ h1 {
 button {
     margin-top: 6vmin;
     position: absolute;
-    top: 500px;
+    top: 700px;
     padding: 1.5vmin;
     font-size: 3vmin;
     border-radius: 6vmin;

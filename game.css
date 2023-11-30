@@ -17,3 +17,31 @@ header {
     padding: 15px;
     
 }
+
+#letter-board {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card {
+    width: 10px;
+    height: 10px;
+    background-color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 6vmin;
+    top: 700px;
+    padding: 1.5vmin;
+    font-size: 3vmin;
+    border-radius: 6vmin;
+}
+
+button:hover {
+    color: white;
+    background-color: dodgerblue;
+}
