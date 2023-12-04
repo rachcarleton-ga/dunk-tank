@@ -29,7 +29,7 @@ button {
   margin-top: 6vmin;
   position: absolute;
 
-  top: 50vmin;
+  top: 80vmin;
   padding: 1.5vmin;
   font-size: 3vmin;
   border-radius: 6vmin;
@@ -45,12 +45,12 @@ button:hover {
   justify-content: center;
 }
 .tank {
-  top: 300px;
+  top: 60vmin;
   position: absolute;
   margin-bottom: 6vmin;
 }
 .stickMan {
-  top: 150px;
+  top: 40vmin;
   position: absolute;
   transition: all ease-in-out 0.5s;
 }
