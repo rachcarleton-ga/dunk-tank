@@ -10,4 +10,4 @@ _Dunk Tank_ is a modern day, less problematic version of the game _Hangman_. It 
 
 **_Credits_**
 
-To be determined
+[Santa hat for stick man](https://museprintables.com/download/how-to-draw/how-to-draw-a-santa-hat/)

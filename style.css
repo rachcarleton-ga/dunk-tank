@@ -14,7 +14,7 @@ body {
 header {
     font-size: 7vmin;
     text-align: center;
-    padding: 15px;
+    padding: 7vmin;
     
 }
 
@@ -22,16 +22,26 @@ h1 {
     font-size: 5vmin;
     position: absolute;
     text-align: center;
-    top: 150px;
-    width: 500px;
-    padding: 10px;
+    top: 10vmin;
+    padding: 10vmin;
 }
 
 button {
     margin-top: 6vmin;
     position: absolute;
-    top: 700px;
+
+    top: 50vmin;
     padding: 1.5vmin;
     font-size: 3vmin;
     border-radius: 6vmin;
+}
+
+button:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+
+.banana {
+    display: flex;
+    justify-content: center;
 }
