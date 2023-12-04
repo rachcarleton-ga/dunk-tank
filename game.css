@@ -1,71 +1,63 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 header {
-    font-size: 7vmin;
-    text-align: center;
-    padding: 10vmin;
-    
+  font-size: 7vmin;
+  text-align: center;
+  padding: 10vmin;
 }
 
 button {
-    margin-top: 6vmin;
-    padding: 1.5vmin;
-    font-size: 3vmin;
-    border-radius: 6vmin;
+  margin-top: 6vmin;
+  padding: 1.5vmin;
+  font-size: 3vmin;
+  border-radius: 6vmin;
 }
 .keyboard {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    gap: 1vmin;
-    padding-top: 6vmin;
-    padding-left: 3vmin;
-    padding-right: 3vmin;
-
-    
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 1vmin;
+  padding-top: 6vmin;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
 }
 #word-display {
-    display: flex;
-    text-align: center;
-    font-size: 14vw;
-    margin-top: 30vmin;
-
-
-
+  display: flex;
+  text-align: center;
+  font-size: 14vw;
+  margin-top: 30vmin;
 }
 
 button:hover {
-    color: white;
-    background-color: dodgerblue;
+  color: white;
+  background-color: dodgerblue;
 }
 
 .gameContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tank {
-    top: 300px;
-    position: absolute;
-    margin-bottom: 6vmin;
-
+  top: 300px;
+  position: absolute;
+  margin-bottom: 6vmin;
 }
 .stickMan {
-top: 150px;
-position: absolute;
-transition: all ease-in-out .5s;
-
+  top: 150px;
+  position: absolute;
+  transition: all ease-in-out 0.5s;
 }
