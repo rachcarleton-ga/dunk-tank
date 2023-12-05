@@ -126,6 +126,7 @@ function initializeGame() {
   updateWordDisplay();
   displayResult(" ");
 }
+const stickMan = document.querySelector(".stickMan") 
 
 function guessLetter(button) {
   const guess = button.textContent.toLowerCase();
@@ -157,6 +158,9 @@ function guessLetter(button) {
   updateWordDisplay();
 }
 
+function updateStickMan(step) {
+  stickMan.style.
+}
 function updateWordDisplay() {
   const wordDisplayElement = document.getElementById("word-display");
   wordDisplayElement.textContent = guessedLetters.join(" ");
