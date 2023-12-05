@@ -54,6 +54,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .tank {
  
@@ -65,7 +66,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  position: absolute;
   transition: all ease-in-out 0.5s;
 }
 
@@ -73,4 +74,11 @@ button:hover {
   height: 157px;
   width: 100%;
  
+}
+.stickManContainer {
+  position: relative;
+  height: 300px;
+  width: 100%;
+
+
 }

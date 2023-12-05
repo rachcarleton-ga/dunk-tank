@@ -144,6 +144,7 @@ function guessLetter(button) {
     }
   } else {
     numberOfGuesses++;
+    updateStickMan(numberOfGuesses) 
     if (numberOfGuesses > 5) {
       displayResult("You've been Dunked!");
     } else {
@@ -159,7 +160,7 @@ function guessLetter(button) {
 }
 
 function updateStickMan(step) {
-  stickMan.style.
+  stickMan.style.marginTop = (27 * step) + "px"
 }
 function updateWordDisplay() {
   const wordDisplayElement = document.getElementById("word-display");
