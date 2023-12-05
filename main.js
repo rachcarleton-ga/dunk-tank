@@ -194,7 +194,7 @@ function displayResult(message) {
 
     setTimeout(() => {
       initializeGame();
-    }, 5000);
+    }, 4000);
     return
   } else {
     const correctWordElement = document.getElementById("result");
