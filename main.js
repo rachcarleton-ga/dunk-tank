@@ -104,7 +104,6 @@ const holidayWords = [
 
 const originalStickManPosition = "-5px"
 /*----- state variables -----*/
-
 let selectedWord;
 let guessedLetters;
 let numberOfGuesses = 0;
@@ -161,7 +160,6 @@ function guessLetter(button) {
         ? "Incorrect guess, you have 1 guess left!"
         : `Incorrect guess, you have ${remainingGuesses} guesses left!`
       displayResult(guessesLeftMessage);
-
       updateStickMan(numberOfGuesses); 
     }
     // logic to track and display the dunk tank here
@@ -174,8 +172,6 @@ function updateStickMan(step) {
   stickMan.style.marginTop = (28 * step) + "px"
 }
   
-
-
 function updateWordDisplay() {
   const wordDisplayElement = document.getElementById("word-display");
   wordDisplayElement.textContent = guessedLetters.join(" ");
@@ -203,14 +199,12 @@ function displayResult(message) {
   }
   resultElement.textContent = message;
 }
-
 // event listeners for keyboard buttons
 document.querySelectorAll("keyboard").forEach((button) => {
   button.addEventListener("click", function () {
     guessLetter(this);
   });
 });
-
 // event listner for play again button
 document.querySelector(".playAgain").addEventListener("click", function () {
   initializeGame();
