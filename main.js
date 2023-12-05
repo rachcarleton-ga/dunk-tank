@@ -102,7 +102,7 @@ const holidayWords = [
   "merry christmas!",
 ];
 
-const originalStickManPosition = "0px"
+const originalStickManPosition = "-5px"
 /*----- state variables -----*/
 
 let selectedWord;
@@ -151,16 +151,18 @@ function guessLetter(button) {
   } else {
     numberOfGuesses++;
     if (numberOfGuesses > 5) {
+      stickMan.style.marginTop = (28 * (numberOfGuesses + 1)) + "px"
       displayResult("You've been dunked!");
     } else {
       // Incorrect letter guessed
+      
       const remainingGuesses = 6 - numberOfGuesses;
       const guessesLeftMessage = remainingGuesses === 1 
         ? "Incorrect guess, you have 1 guess left!"
         : `Incorrect guess, you have ${remainingGuesses} guesses left!`
       displayResult(guessesLeftMessage);
 
-      updateStickMan(numberOfGuesses + 1); 
+      updateStickMan(numberOfGuesses); 
     }
     // logic to track and display the dunk tank here
   }
@@ -169,8 +171,10 @@ function guessLetter(button) {
 }
 
 function updateStickMan(step) {
-  stickMan.style.marginTop = (27 * step) + "px"
+  stickMan.style.marginTop = (28 * step) + "px"
 }
+  
+
 function updateWordDisplay() {
   const wordDisplayElement = document.getElementById("word-display");
   wordDisplayElement.textContent = guessedLetters.join(" ");
@@ -178,6 +182,24 @@ function updateWordDisplay() {
 
 function displayResult(message) {
   const resultElement = document.getElementById("result");
+  resultElement.textContent = message;
+
+  if (message === "You've been dunked!") {
+    const correctWordElement = document.getElementById("result");
+   const newElement = document.createElement("div")
+   
+    newElement.innerText = `The correct word was: ${selectedWord}`;
+    
+    resultElement.appendChild(newElement)
+
+    setTimeout(() => {
+      initializeGame();
+    }, 5000);
+    return
+  } else {
+    const correctWordElement = document.getElementById("result");
+    correctWordElement.textContent = " ";
+  }
   resultElement.textContent = message;
 }
 
