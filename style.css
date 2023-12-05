@@ -45,12 +45,12 @@ button:hover {
   justify-content: center;
 }
 .tank {
-  top: 60vmin;
-  position: absolute;
+  width: 50vw;
+  position: relative;
   margin-bottom: 6vmin;
 }
 .stickMan {
-  top: 40vmin;
-  position: absolute;
+  width: 50vw;
+  position: relative;
   transition: all ease-in-out 0.5s;
 }

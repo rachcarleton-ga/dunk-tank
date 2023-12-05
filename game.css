@@ -50,14 +50,35 @@ button:hover {
   flex-direction: column;
   align-items: center;
 }
-
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .tank {
-  top: 300px;
-  position: absolute;
+  
+  
+  position: relative;
   margin-bottom: 6vmin;
 }
 .stickMan {
-  top: 150px;
-  position: absolute;
+ border: 1px solid red;
+display: flex;
+justify-content: center;
+  position: relative;
   transition: all ease-in-out 0.5s;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
+             /* just so you can see the box */
 }
+.aspectRatio {
+  display: inline-block; /* shrink to fit */
+  width: 100%;           /* whatever width you like */
+  position: relative;    /* so .content can use position: absolute */
+}
+.aspectRatio::after {
+  padding-top: 56.25%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+
