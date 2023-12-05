@@ -120,7 +120,6 @@ function initializeGame() {
   resetStickMan()
   // select random word from the array
   selectedWord = holidayWords[Math.floor(Math.random() * holidayWords.length)];
-  console.log(selectedWord)
   //initialize array to store guessed letters
   for (let letter of selectedWord) {
     if (letter === " ") {
@@ -146,8 +145,6 @@ function guessLetter(button) {
       }
     }
     // Check if the entire word has been guessed
-    console.log(guessedLetters.join(""))
-    console.log(selectedWord)
     if (guessedLetters.join("").replace("*"," ") === selectedWord) {
       displayResult("Congratulations! You stayed dry!");
     }
