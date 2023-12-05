@@ -102,6 +102,7 @@ const holidayWords = [
   "merry christmas!",
 ];
 
+const originalStickManPosition = "0px"
 /*----- state variables -----*/
 
 let selectedWord;
@@ -109,9 +110,14 @@ let guessedLetters;
 let numberOfGuesses = 0;
 
 /*----- functions -----*/
+function resetStickMan() {
+  stickMan.style.marginTop = originalStickManPosition;
+}
+
 function initializeGame() {
   numberOfGuesses = 0;
   guessedLetters = [];
+  resetStickMan()
   // select random word from the array
   selectedWord = holidayWords[Math.floor(Math.random() * holidayWords.length)];
   //initialize array to store guessed letters
@@ -144,14 +150,17 @@ function guessLetter(button) {
     }
   } else {
     numberOfGuesses++;
-    updateStickMan(numberOfGuesses) 
     if (numberOfGuesses > 5) {
-      displayResult("You've been Dunked!");
+      displayResult("You've been dunked!");
     } else {
       // Incorrect letter guessed
-      displayResult(
-        `Incorrect Guess. you have ${6 - numberOfGuesses} guesses left!`
-      );
+      const remainingGuesses = 6 - numberOfGuesses;
+      const guessesLeftMessage = remainingGuesses === 1 
+        ? "Incorrect guess, you have 1 guess left!"
+        : `Incorrect guess, you have ${remainingGuesses} guesses left!`
+      displayResult(guessesLeftMessage);
+
+      updateStickMan(numberOfGuesses + 1); 
     }
     // logic to track and display the dunk tank here
   }
