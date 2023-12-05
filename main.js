@@ -120,6 +120,7 @@ function initializeGame() {
   resetStickMan()
   // select random word from the array
   selectedWord = holidayWords[Math.floor(Math.random() * holidayWords.length)];
+  console.log(selectedWord)
   //initialize array to store guessed letters
   for (let letter of selectedWord) {
     if (letter === " ") {
@@ -145,7 +146,9 @@ function guessLetter(button) {
       }
     }
     // Check if the entire word has been guessed
-    if (guessedLetters.join("") === selectedWord) {
+    console.log(guessedLetters.join(""))
+    console.log(selectedWord)
+    if (guessedLetters.join("").replace("*"," ") === selectedWord) {
       displayResult("Congratulations! You stayed dry!");
     }
   } else {
@@ -174,6 +177,7 @@ function updateStickMan(step) {
   stickMan.style.marginTop = (28 * step) + "px"
 }
   
+
 
 function updateWordDisplay() {
   const wordDisplayElement = document.getElementById("word-display");
