@@ -3,7 +3,6 @@
 }
 
 body {
-
   margin: 0;
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -24,6 +23,7 @@ button {
   font-size: 3vmin;
   border-radius: 6vmin;
 }
+
 .keyboard {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +34,7 @@ button {
   padding-left: 3vmin;
   padding-right: 3vmin;
 }
+
 #word-display {
   display: flex;
   text-align: center;
@@ -51,17 +52,19 @@ button:hover {
   flex-direction: column;
   align-items: center;
 }
+
 .images {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
+
 .tank {
- 
   position: relative;
   margin-bottom: 6vmin;
 }
+
 .stickMan {
   height: 300px;
   display: flex;
@@ -74,8 +77,8 @@ button:hover {
 .aspect {
   height: 157px;
   width: 100%;
- 
 }
+
 .stickManContainer {
   position: relative;
   height: 300px;
