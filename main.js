@@ -117,9 +117,9 @@ function initializeGame() {
   numberOfGuesses = 0;
   guessedLetters = [];
   resetStickMan()
-  // select random word from the array
+  // select random word from the array of holidayWords
   selectedWord = holidayWords[Math.floor(Math.random() * holidayWords.length)];
-  //initialize array to store guessed letters
+  //initialize array to store correctly guessed letters
   for (let letter of selectedWord) {
     if (letter === " ") {
       guessedLetters.push("*");
@@ -127,7 +127,7 @@ function initializeGame() {
       guessedLetters.push("_");
     }
   }
-  // Display the initial state of the word
+  // Display the initial state of the word - number of letters to be guessed and * to signify space between words 
   updateWordDisplay();
   displayResult(" ");
 }
@@ -137,13 +137,13 @@ function guessLetter(button) {
   const guess = button.textContent.toLowerCase();
 
   if (selectedWord.includes(guess)) {
-    // Update guessed letters and display
+    // Update guessed letters and word display
     for (let i = 0; i < selectedWord.length; i++) {
       if (selectedWord[i] === guess) {
         guessedLetters[i] = guess;
       }
     }
-    // Check if the entire word has been guessed
+    // Check if the entire word has been guessed correctly
     if (guessedLetters.join("").replace("*"," ") === selectedWord) {
       displayResult("Congratulations! You stayed dry!");
     }
@@ -154,7 +154,6 @@ function guessLetter(button) {
       displayResult("You've been dunked!");
     } else {
       // Incorrect letter guessed
-      
       const remainingGuesses = 6 - numberOfGuesses;
       const guessesLeftMessage = remainingGuesses === 1 
         ? "Incorrect guess, you have 1 guess left!"
@@ -162,7 +161,6 @@ function guessLetter(button) {
       displayResult(guessesLeftMessage);
       updateStickMan(numberOfGuesses); 
     }
-    // logic to track and display the dunk tank here
   }
   // Update the word display
   updateWordDisplay();
@@ -205,7 +203,7 @@ document.querySelectorAll("keyboard").forEach((button) => {
     guessLetter(this);
   });
 });
-// event listner for play again button
+// event listener for play again button
 document.querySelector(".playAgain").addEventListener("click", function () {
   initializeGame();
 });
